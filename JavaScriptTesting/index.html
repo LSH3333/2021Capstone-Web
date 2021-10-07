@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <div>
+        <input type="file" name="file" id="file">
+        <textarea cols="30" rows="20"></textarea>
+    </div>
+
+    <p id="1">Hello World!</p>
+    <p id="2">Hello World!</p>
+
+    <!-- javascript -->
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="script2.js"></script> -->
+    <!-- <script>
+        var content = 1;
+        window.onload = function() {
+            console.log("HERE");    
+
+            var file = this.files[0];
+            
+            var reader = new FileReader();
+            reader.onload = function(progressEvent) {
+                // By lines
+                // line by line으로 split 
+                var lines = this.result.split('\n');
+                for(var line = 0; line < lines.length; line++){
+                    // console.log(lines[line]);
+                    // content 번호 순으로 텍스트파일의 각 라인 가져와서 HTML 수정 
+                    document.getElementById(content).innerHTML = lines[line];        
+                    content++;
+                }
+            };
+            reader.readAsText(file);   
+        }
+    </script> -->
+
+    <!-- <script>
+        function callName() {
+            console.log("callName");
+        }
+        callName();
+    </script> -->
+    <script src="script2.js" defer></script>
+</body>
+</html>
