@@ -1,16 +1,18 @@
-
+// 사용자가 <input> 에서 text file을 선택해야함. 
+// 경로에 따라 자동으로 불러오는 방법은 아직 찾는중.
 var content = 1;
 
-function ChangeContents() {
-    console.log("ChangeContents");
-    var file = this.files[0];
+// id='file'에 파일입력시 
+document.getElementById('txt_file').onchange = function(){
 
+    var file = this.files[0];
+    
     var reader = new FileReader();
     reader.onload = function(progressEvent){
-      // Entire file
-      //console.log(this.result);
+      // 전체 파일 
+      //console.log(this.result);      
   
-      // By lines
+      // 라인별 
       // line by line으로 split 
       var lines = this.result.split('\n');
       for(var line = 0; line < lines.length; line++){
@@ -20,7 +22,5 @@ function ChangeContents() {
         content++;
       }
     };
-    reader.readAsText(file);   
-}
-
-ChangeContents();
+    reader.readAsText(file);
+  };
